@@ -1,0 +1,16 @@
+{
+    "name":"conch",
+    "objective":true,
+    "consumable":false,
+    "tool":true,
+    "identifier":"c",
+    "actions":[
+        {
+            "identifier":"conch_blow",
+            "key":"b"
+        }
+    ],
+    "texture":"conch.png",
+    "pickup":true,
+    "interactWith":true
+}

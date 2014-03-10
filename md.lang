@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Install (sudo required) to /usr/share/gtksourceview-3.0/language-specs
+    
+    Path might be gtksourceview-2.0
+    
+    I am very open to revisions on this file
+-->
+<language id="mapdata" _name="MapData" version="2.0" _section="Markup">
+  <metadata>
+    <property name="globs">*.md;</property>
+  </metadata>
+
+  <styles>
+    <style id="comment" _name="Comment" map-to="def:comment"/>
+    <style id="character" _name="Character" map-to="def:string"/>
+    <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+    <style id="function" _name="Function" map-to="def:identifier"/>
+    <style id="variable" _name="Variable" map-to="def:type"/>
+    <style id="decimal" _name="Decimal" map-to="def:decimal"/>
+    <style id="string" _name="String" map-to="def:string"/>
+    <style id="escape" _name="Escaped Character" map-to="def:special-char"/>
+  </styles>
+
+  <definitions>
+    <context id="sand" style-ref="keyword">
+        <match>s</match>
+    </context>
+    <context id="grass" style-ref="string">
+        <match>(g|t)</match>
+    </context>
+    <context id="water" style-ref="function">
+        <match>w</match>
+    </context>
+    <context id="mapdata">
+      <include>
+        <context ref="water"/>
+        <context ref="grass"/>
+        <context ref="sand"/>
+      </include>
+    </context>
+  </definitions>
+</language>
