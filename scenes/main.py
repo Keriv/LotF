@@ -257,6 +257,7 @@ class Scene():
                     print "GATHER"
                     self.wm.dialog(data['message'],3000,self)
                 elif setype == "setPos":
+                    self.cseq = self.cseq + 1
                     if data['player'] == "piggy":
                         self.piggy['pos'] = [data['x'],data['y']]
                     elif data['player'] == "player":
