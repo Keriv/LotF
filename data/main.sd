@@ -114,7 +114,7 @@
                 "type":"move",
                 "canMove":true,
                 "who":"piggy",
-                “x”:-4
+                "x":-4
             },
             {
                 "type":"dialog",
