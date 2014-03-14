@@ -111,6 +111,18 @@
         "optional":false,
         "sequence":[
             {
+                "type":"setPos",
+                "player":"piggy",
+                "x":6,
+                "y":9
+            },
+            {
+                "type":"setPos",
+                "player":"player",
+                "x":6,
+                "y":10
+            },
+            {
                 "type":"move",
                 "canMove":true,
                 "who":"piggy",
@@ -176,7 +188,29 @@
             {
                 "type":"dialog",
                 "to":"piggy",
-                "message":"What is it?",
+                "message":"What's that?",
+                "canMove":true
+            },
+            {
+                "type":"delay",
+                "time":0.5,
+                "canMove":true
+            },
+            {
+                "type":"dialog",
+                "to":"piggy",
+                "message":"A stone.",
+                "canMove":true
+            },
+            {
+                "type":"delay",
+                "time":0.5,
+                "canMove":true
+            },
+            {
+                "type":"dialog",
+                "from":"piggy",
+                "message":"No. A shell",
                 "canMove":true
             }
         ]
