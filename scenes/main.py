@@ -242,16 +242,16 @@ class Scene():
                     while done == False:
                         if data['who'] == 'ralph':
                             if final < self.p['pos'][axis]:
-                                self.p['pos'][axis] -= 1
-                            elif final > self.p['pos'][axis]:
                                 self.p['pos'][axis] += 1
+                            elif final > self.p['pos'][axis]:
+                                self.p['pos'][axis] -= 1
                             else:
                                 done = True
                         if data['who'] == 'piggy':
                             if final < self.piggy['pos'][axis]:
-                                self.piggy['pos'][axis] -= 1
-                            elif final > self.piggy['pos'][axis]:
                                 self.piggy['pos'][axis] += 1
+                            elif final > self.piggy['pos'][axis]:
+                                self.piggy['pos'][axis] -= 1
                             else:
                                 done = True
                         self.render(canMove=data['canMove'],story = False)
