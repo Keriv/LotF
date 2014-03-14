@@ -4,16 +4,16 @@
         "optional":false,
         "sequence":[
 	    {
-		“type”:”setPos”,
-		“player”:”piggy”,
-		“x”:6,
-		“y”:4
+		"type":"setPos",
+		"player":"piggy",
+		"x":6,
+		"y":4
 	    },
 	    {
-		“type”:”setPos”,
-		“player”:”piggy”,
-		“x”:6,
-		“y”:10
+		"type":"setPos",
+		"player":"piggy",
+		"x":6,
+		"y":10
 	    },
             {
                 "type":"dialog",
