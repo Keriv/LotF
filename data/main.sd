@@ -11,7 +11,7 @@
             },
             {
                 "type":"setPos",
-                "player":"piggy",
+                "player":"player",
                 "x":6,
                 "y":10
             },
