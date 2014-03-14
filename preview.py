@@ -389,6 +389,14 @@ class Scene():
                                 self.w.blit(self.grassm2,((x-startx)*self.block,(y-starty)*self.block))
                             elif self.fmap[y][x] == "e":
                                 self.w.blit(self.grassm3,((x-startx)*self.block,(y-starty)*self.block))
+                        elif tex == self.sand:
+                            elif tex == self.sand:
+                                if self.fmap[y][x] == "r":
+                                    self.w.blit(self.rock,((x-startx)*self.block,(y-starty)*self.block))
+                                elif self.fmap[y][x] == "x":
+                                    self.w.blit(self.rock2,((x-startx)*self.block,(y-starty)*self.block))
+                                elif self.fmap[y][x] == "z":
+                                    self.w.blit(self.rock3,((x-startx)*self.block,(y-starty)*self.block))
                         if self.fmap[y][x] == "t":
                             self.w.blit(self.tree,(((x-startx)*self.block) - self.block,int(((y-starty)*self.block))-(self.block * 3.75)+(self.block)))
                 except IndexError:
