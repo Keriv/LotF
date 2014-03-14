@@ -236,9 +236,9 @@ class Scene():
                     done = False
                     self.cseq = self.cseq + 1
                     if data['who'] == "ralph":
-                        final = self.p['pos'][axis] - new
+                        final = self.p['pos'][axis] + new
                     elif data['who'] == "piggy":
-                        final = self.piggy['pos'][axis] - new
+                        final = self.piggy['pos'][axis] + new
                     while done == False:
                         if data['who'] == 'ralph':
                             if final < self.p['pos'][axis]:
