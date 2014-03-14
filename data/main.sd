@@ -18,13 +18,13 @@
             {
                 "type":"dialog",
                 "from":"boy",
-                "message”:”Hey! Wait a minute!”,
+                "message”:"Hey! Wait a minute!",
                 "canMove":false
             },
             {
                 "type":"move",
                 "who":"piggy",
-                “y”:5,
+                "y":5,
                 "canMove":false
             },
             {
