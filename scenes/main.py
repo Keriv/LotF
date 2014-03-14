@@ -239,6 +239,7 @@ class Scene():
                         final = self.p['pos'][axis] + new
                     elif data['who'] == "piggy":
                         final = self.piggy['pos'][axis] + new
+                    print final
                     while done == False:
                         if data['who'] == 'ralph':
                             if final < self.p['pos'][axis]:
