@@ -171,6 +171,11 @@
             {
                 "type":"talkTo",
                 "person":"piggy",
+            },
+            {
+                "type":"dialog",
+                "to":"piggy",
+                "message":"What is it?"
             }
         ]
     }

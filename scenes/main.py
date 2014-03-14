@@ -276,8 +276,10 @@ class Scene():
                     while not done:
                         self.render(story = False)
                         if data['person'] == "piggy":
-                            print "FIND PIGGY"
-
+                            if self.p['pos'][0] - 1 == self.piggy['pos'][0] or self.p['pos'][0] + 1 == self.piggy['pos'][0] or self.p['pos'][1] - 1 == self.piggy['pos'][1] or self.p['pos'][0] - 1 == self.piggy['pos'][0]
+                                keys = pygame.key.get_pressed()
+                                if keys[K_e]:
+                                    done = True
 
         try:
             canMove = self.story[self.cstage]['sequence'][self.cseq]['canMove']
