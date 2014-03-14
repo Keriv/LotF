@@ -170,12 +170,14 @@
         "sequence":[
             {
                 "type":"talkTo",
-                "person":"piggy"
+                "person":"piggy",
+                "canMove":true
             },
             {
                 "type":"dialog",
                 "to":"piggy",
-                "message":"What is it?"
+                "message":"What is it?",
+                "canMove":true
             }
         ]
     }
