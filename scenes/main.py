@@ -229,12 +229,16 @@ class Scene():
                     start = self.p['pos']
                     if "x" in data:
                         axis = 0
-                        final = self.p['pos'][axis] - data['x']
+                        new = data['x']
                     elif "y" in data:
                         axis = 1
-                        final = self.piggy['pos'][axis] - data['y']
+                        new = data['y']
                     done = False
                     self.cseq = self.cseq + 1
+                    if data['who'] == "ralph":
+                        final = self.p['pos'][axis] - new
+                    elif data['who'] == "piggy":
+                        final = self.piggy['pos'][axis] - new
                     while done == False:
                         if data['who'] == 'ralph':
                             if final < self.p['pos'][axis]:
