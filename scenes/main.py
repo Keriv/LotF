@@ -280,6 +280,7 @@ class Scene():
                                 keys = pygame.key.get_pressed()
                                 if keys[pygame.K_e]:
                                     done = True
+                    sys.exit(1)
 
         try:
             canMove = self.story[self.cstage]['sequence'][self.cseq]['canMove']
