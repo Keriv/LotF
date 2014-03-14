@@ -3,22 +3,22 @@
         "name":"start_game",
         "optional":false,
         "sequence":[
-	    {
-		"type":"setPos",
-		"player":"piggy",
-		"x":6,
-		"y":4
-	    },
-	    {
-		"type":"setPos",
-		"player":"piggy",
-		"x":6,
-		"y":10
-	    },
+            {
+                "type":"setPos",
+                "player":"piggy",
+                "x":6,
+                "y":4
+            },
+            {
+                "type":"setPos",
+                "player":"piggy",
+                "x":6,
+                "y":10
+            },
             {
                 "type":"dialog",
                 "from":"boy",
-                "message”:"Hey! Wait a minute!",
+                "message":"Hey! Wait a minute!",
                 "canMove":false
             },
             {
