@@ -261,7 +261,7 @@ class Scene():
                     if data['player'] == "piggy":
                         self.piggy['pos'] = [data['x'],data['y']]
                     elif data['player'] == "player":
-                        self.player['pos'] = [data['x'],data['y']]
+                        self.p['pos'] = [data['x'],data['y']]
         try:
             canMove = self.story[self.cstage]['sequence'][self.cseq]['canMove']
         except:
