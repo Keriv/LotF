@@ -249,9 +249,9 @@ class Scene():
                                 done = True
                         if data['who'] == 'piggy':
                             if final < self.piggy['pos'][axis]:
-                                self.p['pos'][axis] -= 1
+                                self.piggy['pos'][axis] -= 1
                             elif final > self.piggy['pos'][axis]:
-                                self.p['pos'][axis] += 1
+                                self.piggy['pos'][axis] += 1
                             else:
                                 done = True
                         self.render(canMove=data['canMove'],story = False)
