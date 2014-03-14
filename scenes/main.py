@@ -262,11 +262,23 @@ class Scene():
                     print "GATHER"
                     self.wm.dialog(data['message'],3000,self)
                 elif setype == "setPos":
+                    print "SETPOS"
                     self.cseq = self.cseq + 1
                     if data['player'] == "piggy":
                         self.piggy['pos'] = [data['x'],data['y']]
                     elif data['player'] == "player":
                         self.p['pos'] = [data['x'],data['y']]
+                elif setype == "talkTo":
+                    print "TALKTO"
+                    self.cseq = self.cseq + 1
+                    self.wm.dialog("Talk to "+data['person'].title(),2000,self)
+                    done = False
+                    while not done:
+                        self.render(story = False)
+                        if data['person'] == "piggy":
+                            print "FIND PIGGY"
+
+
         try:
             canMove = self.story[self.cstage]['sequence'][self.cseq]['canMove']
         except:
@@ -293,7 +305,7 @@ class Scene():
                             print "Error With Keys"
                 if e.type == pygame.KEYUP:
                     if e.key == pygame.K_ESCAPE:
-                        options = ["Cancel",'Return to Menu',"Quit to Desktop"]
+                        options = ["Cancel","Return to Menu","Quit to Desktop"]
                         result = self.wm.menu("Game Paused",options,self)
                         if result == 1:
                             self.save()
@@ -472,6 +484,13 @@ class Scene():
                             self.w.blit(self.grassm2,((x-startx)*self.block,(y-starty)*self.block))
                         elif self.fmap[y][x] == "e":
                             self.w.blit(self.grassm3,((x-startx)*self.block,(y-starty)*self.block))
+                    elif tex == self.sand:
+                        if self.fmap[y][x] == "r":
+                            self.w.blit(self.rock,((x-startx)*self.block,(y-starty)*self.block))
+                        elif self.fmap[y][x] == "x":
+                            self.w.blit(self.rock2,((x-startx)*self.block,(y-starty)*self.block))
+                        elif self.fmap[y][x] == "z":
+                            self.w.blit(self.rock3,((x-startx)*self.block,(y-starty)*self.block))
                     if y == py and x == px:
                         self.w.blit(self.ralphT,((x-startx)*self.block,(y-starty)*self.block))
                     if y == self.piggy['pos'][1] and x == self.piggy['pos'][0]:
