@@ -226,38 +226,41 @@ class Scene():
                     self.cseq += 1
                 elif setype == "move":
                     print "MOVE"
+                    start = self.p['pos']
                     if "x" in data:
-                        new = data['x']
                         axis = 0
+                        final = self.p['pos'][axis] - data['x']
                     elif "y" in data:
-                        new = data['y']
                         axis = 1
+                        final = self.piggy['pos'][axis] - data['y']
                     done = False
                     self.cseq = self.cseq + 1
                     while done == False:
                         if data['who'] == 'ralph':
-                            if self.p['pos'][axis] < new:
-                                self.p['pos'][axis] += 1
-                            elif self.p['pos'][axis] > new:
+                            if final < self.p['pos'][axis]:
                                 self.p['pos'][axis] -= 1
+                            elif final > self.p['pos'][axis]:
+                                self.p['pos'][axis] += 1
                             else:
                                 done = True
                         if data['who'] == 'piggy':
-                            if self.piggy['pos'][axis] == new:
-                                done = True
-                            elif self.piggy['pos'][axis] < new:
-                                self.piggy['pos'][axis] += 1
-                            elif self.piggy['pos'][axis] > new:
-                                self.piggy['pos'][axis] -= 1
+                            if final < self.piggy['pos'][axis]:
+                                self.p['pos'][axis] -= 1
+                            elif final > self.piggy['pos'][axis]:
+                                self.p['pos'][axis] += 1
                             else:
                                 done = True
                         self.render(canMove=data['canMove'],story = False)
                         pygame.display.update()
                         time.sleep(0.15)
-                elif setype == 'gather':
+                elif setype == "gather":
                     print "GATHER"
                     self.wm.dialog(data['message'],3000,self)
-                    
+                elif setype == "setPos":
+                    if data['player'] == "piggy":
+                        self.piggy['pos'] = [data['x'],data['y']]
+                    elif data['player'] == "player":
+                        self.player['pos'] = [data['x'],data['y']]
         try:
             canMove = self.story[self.cstage]['sequence'][self.cseq]['canMove']
         except:

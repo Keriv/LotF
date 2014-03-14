@@ -3,16 +3,28 @@
         "name":"start_game",
         "optional":false,
         "sequence":[
+	    {
+		“type”:”setPos”,
+		“player”:”piggy”,
+		“x”:6,
+		“y”:4
+	    },
+	    {
+		“type”:”setPos”,
+		“player”:”piggy”,
+		“x”:6,
+		“y”:10
+	    },
             {
                 "type":"dialog",
                 "from":"boy",
-                "message":"yo nigs!",
+                "message”:”Hey! Wait a minute!”,
                 "canMove":false
             },
             {
                 "type":"move",
                 "who":"piggy",
-                "y":9,
+                “y”:5,
                 "canMove":false
             },
             {
@@ -102,7 +114,7 @@
                 "type":"move",
                 "canMove":true,
                 "who":"piggy",
-                "x":2
+                “x”:-4
             },
             {
                 "type":"dialog",
@@ -125,7 +137,7 @@
                 "type":"move",
                 "canMove":true,
                 "who":"piggy",
-                "y":10
+                "y":1
             },
             {
                 "type":"delay",
@@ -136,7 +148,7 @@
                 "type":"move",
                 "canMove":true,
                 "who":"piggy",
-                "y":11
+                "y":1
             },
             {
                 "type":"delay",
