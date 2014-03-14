@@ -170,7 +170,7 @@
         "sequence":[
             {
                 "type":"talkTo",
-                "person":"piggy",
+                "person":"piggy"
             },
             {
                 "type":"dialog",
