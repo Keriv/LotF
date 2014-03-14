@@ -278,6 +278,7 @@ class Scene():
                         if data['person'] == "piggy":
                             if self.p['pos'][0] - 1 == self.piggy['pos'][0] or self.p['pos'][0] + 1 == self.piggy['pos'][0] or self.p['pos'][1] - 1 == self.piggy['pos'][1] or self.p['pos'][0] - 1 == self.piggy['pos'][0]:
                                 keys = pygame.key.get_pressed()
+                                print keys
                                 if keys[K_e]:
                                     done = True
 
